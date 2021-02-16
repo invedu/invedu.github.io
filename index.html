@@ -209,16 +209,40 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="main_heading">
-					<h1>Call to Action</h1>
+					<h1>Sign Up to learn more.</h1>
 					<div  class="text-center"><span class="underline"></span></div>
 				</div>
 			</div><!-- End col-md-12 -->
 		</div><!-- End row -->
 
-		<div class="col-md-12">
+		<div class="col-md-12" id="col-md-12">
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
 		</div><!-- End col-md-12-->
+		<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfrGsAOcM2HgELw21xzgI6zE5Qsv24lx6r2NAwWSZ3tG2UYHw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+		 		<p> Name:<br>
+		  <input type="text" name="entry.2005620554" id="entry.2005620554"><br>
+		  	<p>Email:<br>
+		  <input type="text" name="entry.1045781291" id="entry.1045781291"><br>
 
+				<p>What describes you?:<br>
+			<select name="entry.1337472286" id="entry.1337472286">
+				<option value="student">Student</option>
+				<option value="investor">Investor</option>
+				<option value="other">Other</option>
+			</select><br><br>
+		<input type="submit" value="Submit">
+		</form>
+
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+		<script src="js/jquery-main.js"></script>
+		<script type="text/javascript">var submitted=false;</script>
+		<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+		  $('#gform *').fadeOut(2000);
+			$('#col-md-12 *').fadeOut(2000);
+		  $('#gform').prepend('Thanks! You have been added to our email list :) ');
+		  });
+		</script>
 	</div><!-- End container -->
 </div>
 
